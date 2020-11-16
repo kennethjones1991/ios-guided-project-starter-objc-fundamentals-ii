@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
-    NSString * appDelegateClassName;
+    NSString *appDelegateClassName;
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
