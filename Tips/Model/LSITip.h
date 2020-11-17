@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSITip : NSObject
 
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) double total;
+@property (nonatomic, readonly) NSInteger splitCount;
+@property (nonatomic, readonly) double tipPercentage;
+
 @end
 
 NS_ASSUME_NONNULL_END
