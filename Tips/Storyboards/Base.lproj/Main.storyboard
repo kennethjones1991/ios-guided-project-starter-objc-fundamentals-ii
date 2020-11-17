@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oP8-A4-c0t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oP8-A4-c0t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,13 +36,13 @@
                                         <rect key="frame" x="0.0" y="91" width="374" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yy-2b-Cdy">
-                                                <rect key="frame" x="0.0" y="0.0" width="47" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="34"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dtn-8P-b8p">
-                                                <rect key="frame" x="55" y="0.0" width="319" height="34"/>
+                                                <rect key="frame" x="55.5" y="0.0" width="318.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -50,25 +52,28 @@
                                         <rect key="frame" x="0.0" y="141" width="374" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-zp-hKn">
-                                                <rect key="frame" x="0.0" y="4" width="119" height="24"/>
+                                                <rect key="frame" x="0.0" y="4" width="119.5" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bP-jL-21Q">
-                                                <rect key="frame" x="127" y="4" width="77.5" height="24"/>
+                                                <rect key="frame" x="127.5" y="4" width="76.5" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="people" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pe7-X4-bC6">
-                                                <rect key="frame" x="212.5" y="4" width="59.5" height="24"/>
+                                                <rect key="frame" x="212" y="4" width="60" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Aqe-rd-BYX">
                                                 <rect key="frame" x="280" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="updateSplit:" destination="oP8-A4-c0t" eventType="valueChanged" id="dPa-qF-QAL"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -79,13 +84,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Tip percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaD-Qm-udW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="136.5" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="24"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMG-Uo-Xic">
-                                                        <rect key="frame" x="144.5" y="0.0" width="229.5" height="24"/>
+                                                        <rect key="frame" x="145.5" y="0.0" width="228.5" height="24"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -94,18 +99,24 @@
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kNt-id-Gqe">
                                                 <rect key="frame" x="-2" y="32" width="378" height="31"/>
+                                                <connections>
+                                                    <action selector="updatePercentage:" destination="oP8-A4-c0t" eventType="valueChanged" id="3yQ-kD-wNG"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDA-Ul-XQd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDA-Ul-XQd">
                                         <rect key="frame" x="0.0" y="267" width="374" height="30"/>
                                         <state key="normal" title="Save Tip"/>
+                                        <connections>
+                                            <action selector="saveTip:" destination="oP8-A4-c0t" eventType="touchUpInside" id="hK4-gy-Yjc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GwR-Pd-0HM">
                                 <rect key="frame" x="0.0" y="409" width="414" height="453"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TipCell" textLabel="UMH-lH-c5S" style="IBUITableViewCellStyleDefault" id="Vx0-HH-dKy">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -127,7 +138,8 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RQC-Sa-V0t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RQC-Sa-V0t" firstAttribute="trailing" secondItem="AyC-zw-1zr" secondAttribute="trailing" constant="20" id="2md-KB-HdH"/>
                             <constraint firstItem="GwR-Pd-0HM" firstAttribute="top" secondItem="AyC-zw-1zr" secondAttribute="bottom" constant="8" id="3aR-yl-Cle"/>
@@ -137,12 +149,25 @@
                             <constraint firstItem="AyC-zw-1zr" firstAttribute="leading" secondItem="RQC-Sa-V0t" secondAttribute="leading" constant="20" id="jZ8-dm-UFF"/>
                             <constraint firstItem="AyC-zw-1zr" firstAttribute="top" secondItem="RQC-Sa-V0t" secondAttribute="top" constant="60" id="uUz-Q7-ymB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="RQC-Sa-V0t"/>
                     </view>
+                    <connections>
+                        <outlet property="percentageLabel" destination="DMG-Uo-Xic" id="efR-yG-5bY"/>
+                        <outlet property="percentageSlider" destination="kNt-id-Gqe" id="IQs-rx-9uZ"/>
+                        <outlet property="splitLabel" destination="6bP-jL-21Q" id="aic-fh-iFI"/>
+                        <outlet property="splitStepper" destination="Aqe-rd-BYX" id="0qZ-Kl-NXD"/>
+                        <outlet property="tableView" destination="GwR-Pd-0HM" id="IkP-n1-Oh0"/>
+                        <outlet property="tipLabel" destination="SwS-gX-2WU" id="Bq1-m7-bR9"/>
+                        <outlet property="totalTextField" destination="Dtn-8P-b8p" id="xrj-7a-kaT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8p-fq-xn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186.95652173913044" y="95.758928571428569"/>
+            <point key="canvasLocation" x="145" y="51"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
